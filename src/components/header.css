@@ -1,0 +1,55 @@
+.logo {
+
+    width: 120px;
+}
+
+header {
+
+    height: 110px;
+    background-color: #353c59;
+    padding-top: 10px;
+    padding-left: 15%;
+    font-family: 'Montserrat', sans-serif
+}
+
+.div_menu a {
+    color: white;
+    font-size: 20px;
+}
+
+.div_menu {
+    margin-left: 2%;
+    gap: 20px;
+    display: flex;
+}
+
+.div_header {
+    display: flex;
+    align-items: flex-end;
+
+
+}
+
+.div_content_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+}
+
+.div_header_reseau img {
+    width: 30px;
+    height: 30px;
+}
+
+.div_header_reseau {
+    display: flex;
+    gap: 10px;
+    margin-right: 2%;
+}
+
+.div_header {
+    width: 100%;
+}
+
+.div_presentation_equipe {}
