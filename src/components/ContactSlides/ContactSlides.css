@@ -1,0 +1,46 @@
+.contact-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* height: 100vh; */
+    width: 250px;
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    top: 30%;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    z-index: 1000;
+}
+
+.contact-sidebar h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #555;
+    padding-bottom: 10px;
+}
+
+.contact-item {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.contact-item a {
+    color: #9ecfff;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+/* Pour que le contenu principal ne soit pas caché sous la sidebar */
+.content-with-sidebar {
+    margin-left: 270px;
+    /* largeur sidebar + un peu de marge */
+    padding: 20px;
+}

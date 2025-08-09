@@ -1,0 +1,32 @@
+.slider {
+    display: flex;
+    width: max-content;
+    animation: slide 20s linear infinite;
+}
+
+.slider img {
+    width: 200px;
+    margin-right: 20px;
+    border-radius: 8px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slider-container {
+    width: 80%;
+    /* 3 images visibles environ */
+    overflow: hidden;
+    margin: auto;
+
+    padding: 10px 0;
+    background: #e6f0f9;
+    border-radius: 10px;
+}

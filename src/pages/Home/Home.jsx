@@ -1,7 +1,7 @@
 import React from 'react';
 import './home.css';
 import VideoPresentation from '../Home/video_presentation.mp4';
-
+import Confiance from '../../components/Confiance/Confiance';
 import Personnage from '../../components/Personnage/Personnage';
 const Home = () => {
   return (
@@ -32,6 +32,7 @@ const Home = () => {
           </div>
         </div>
         <Personnage />
+        <Confiance />
       </div>
     </>
   );

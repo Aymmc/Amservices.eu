@@ -51,27 +51,3 @@ header {
 .div_header {
     width: 100%;
 }
-
-.div_equipe {
-    gap: 30px;
-    display: flex;
-    justify-content: center;
-}
-
-.div_equipe img {
-    width: 200px;
-    height: 200px;
-}
-
-.personnage {
-    width: 200px;
-}
-
-.personnage h3 {
-    text-align: center;
-    color: #1f2231;
-}
-
-.personnage p {
-    color: #3b3959;
-}

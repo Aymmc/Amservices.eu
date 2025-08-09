@@ -1,0 +1,30 @@
+.Confiance {
+    background-color: #e6f0f9;
+    padding-bottom: 50px;
+}
+
+.Confiance_Desc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    Padding-top: 70px;
+    gap: 10px;
+}
+
+.Confiance_Desc h3 {
+
+
+    color: #2a2f45;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.Confiance_Desc p {
+
+    font-family: Poppins;
+    color: #8188a6;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.6;
+}
