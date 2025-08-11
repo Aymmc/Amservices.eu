@@ -1,0 +1,42 @@
+.mentions-legales-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.mentions-legales-container h1,
+.mentions-legales-container h2 {
+    color: #1a5276;
+    border-bottom: 2px solid #1a5276;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+.mentions-legales-container h3 {
+    color: #2c3e50;
+}
+
+.mentions-legales-container p,
+ul {
+    margin-bottom: 15px;
+}
+
+.mentions-legales-container ul {
+    padding-left: 20px;
+}
+
+.mentions-legales-container li {
+    margin-bottom: 5px;
+}
+
+.contact-info strong {
+    display: inline-block;
+    width: 150px;
+}
+
+.mentions-legales-container a {
+    color: #1a5276;
+    text-decoration: none;
+}

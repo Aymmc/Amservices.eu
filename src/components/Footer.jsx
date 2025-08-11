@@ -17,7 +17,14 @@ const Footer = () => {
               />
             </NavLink>
           </div>
-
+          <div className="div_footer_content">
+            <p>
+              ©2025 Tous droits réservés AmServices
+            </p>
+            <NavLink className="mentionlegal" to={"/mentionlegal"}>
+              Mention Légal
+            </NavLink>
+          </div>
         </div>
       </div>
 

@@ -5,3 +5,21 @@ footer {
     padding-left: 15%;
     font-family: 'Montserrat', sans-serif
 }
+
+.div_footer {
+    display: flex;
+    align-items: flex-end;
+    color: white;
+    gap: 20px;
+}
+
+.div_footer_content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.mentionlegal {
+    margin-right: 20px;
+    color: white;
+}

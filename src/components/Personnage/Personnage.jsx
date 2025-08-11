@@ -19,7 +19,7 @@ const Personnage = () => {
                     }
                 });
             },
-            { threshold: 0.1 } // déclenchement quand 20% de l'élément est visible
+            { threshold: 0.1 }
         );
 
         const elements = containerRef.current.querySelectorAll(".personnage");
@@ -29,43 +29,47 @@ const Personnage = () => {
     }, []);
 
     return (
-        <div className='div_equipe' ref={containerRef}>
-            <div className="personnage">
-                <img src={AM} alt="Image de Aurelien " />
-                <div className="div_equipe_titre">
-                    <h3>AURELIEN</h3>
-                    <p>Technicien Informatique et réseau confirmé.</p>
-                </div>
-                <p>Spécialité : Réseau - Téléphonie - Serveurs Mails - Cybersécurité</p>
+        <section className='div_equipe' ref={containerRef} aria-label="Présentation de l'équipe">
+            <div className="div_equipe1" role="list">
+                <article className="personnage" role="listitem">
+                    <img src={AM} alt="Portrait d'Aurélien, technicien informatique et réseau confirmé" />
+                    <div className="div_equipe_titre">
+                        <h3>AURÉLIEN</h3>
+                        <p>Technicien Informatique et réseau confirmé.</p>
+                    </div>
+                    <p>Spécialité : Réseau - Téléphonie - Serveurs Mails - Cybersécurité</p>
+                </article>
+
+                <article className="personnage" role="listitem">
+                    <img src={CM} alt="Portrait de Catherine, assistante de direction et commerciale" />
+                    <div className="div_equipe_titre">
+                        <h3>CATHERINE</h3>
+                        <p>Assistante de direction et commerciale.</p>
+                    </div>
+                    <p>Spécialité : Gestion relation client - Experte audits contractuels</p>
+                </article>
             </div>
 
-            <div className="personnage">
-                <img src={CM} alt="Image de Catherine" />
-                <div className="div_equipe_titre">
-                    <h3>CATHERINE</h3>
-                    <p>Assistante de gestion commerciale confirmée.</p>
-                </div>
-                <p>Spécialité : Gestion relation client - Experte audits contractuels</p>
-            </div>
+            <div className="div_equipe2" role="list">
+                <article className="personnage" role="listitem">
+                    <img src={FH} alt="Portrait de Frantz, spécialiste dépannage PC et administration serveurs" />
+                    <div className="div_equipe_titre">
+                        <h3>FRANTZ</h3>
+                        <p>Spécialité : Dépannage PC - Administration serveurs - NAS.</p>
+                    </div>
+                    <p>Spécialité : Réseau - Téléphonie - Serveurs Mails - Cybersécurité</p>
+                </article>
 
-            <div className="personnage">
-                <img src={FH} alt="Image de Frantz" />
-                <div className="div_equipe_titre">
-                    <h3>FRANTZ</h3>
-                    <p>Spécialité : Dépannage PC - Administration serveurs - NAS.</p>
-                </div>
-                <p>Spécialité : Réseau - Téléphonie - Serveurs Mails - Cybersécurité</p>
+                <article className="personnage" role="listitem">
+                    <img src={GC} alt="Portrait de Gaëtan, technicien informatique et réseau polyvalent" />
+                    <div className="div_equipe_titre">
+                        <h3>GAËTAN</h3>
+                        <p>Technicien Informatique et réseau.</p>
+                    </div>
+                    <p>Spécialité : Technicien informatique et réseau généraliste polyvalent.</p>
+                </article>
             </div>
-
-            <div className="personnage">
-                <img src={GC} alt="Image de Gaetan" />
-                <div className="div_equipe_titre">
-                    <h3>GAËTAN</h3>
-                    <p>Technicien Informatique et réseau.</p>
-                </div>
-                <p>Spécialité : Technicien informatique et réseau généraliste polyvalent.</p>
-            </div>
-        </div>
+        </section>
     );
 };
 

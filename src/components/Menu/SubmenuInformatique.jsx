@@ -1,16 +1,20 @@
-// SubMenuInformatique.jsx
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import './SubmenuInformatique.css';
-import { useNavigate } from "react-router-dom";
 
 const SubMenuInformatique = () => {
     const navigate = useNavigate();
 
     return (
         <div className="navlink_with_submenu">
-            <NavLink to="/informatique">Informatique</NavLink>
-            <div className="submenu">
+            <NavLink
+                to="/informatique"
+                className={({ isActive }) => (isActive ? "active" : "")}
+                aria-haspopup="true"
+            >
+                Informatique
+            </NavLink>
+            <div className="submenu submenuinfo">
                 <div className="navlink_description">
                     <h3>Services Informatiques</h3>
                     <p>
@@ -24,10 +28,24 @@ const SubMenuInformatique = () => {
                     </button>
                 </div>
                 <div className="navlink_menu">
-                    <NavLink to="/informatique/infogerance">Infogérance & Maintenance</NavLink>
-                    <NavLink to="/informatique/reseaux">Réseaux & Infrastructure</NavLink>
-                    <NavLink to="/informatique/materiel">Matériel & Vente</NavLink>
-                    <NavLink to="https://media.amservices.eu/AnyDesk.exe">Depannage</NavLink>
+                    <NavLink
+                        to="/informatique/infogerance"
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                        Infogérance & Maintenance
+                    </NavLink>
+                    <NavLink
+                        to="/informatique/reseaux"
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                        Réseaux & Infrastructure
+                    </NavLink>
+                    <NavLink
+                        to="/informatique/materiel"
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                        Matériel & Vente
+                    </NavLink>
                 </div>
             </div>
         </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import CCPVM from './CCPVM.jpg'
 import Adam from './adam.png';
 import Look from './look.png';
 import Marcot from './marcot.png';
@@ -11,7 +11,7 @@ import Ambus from './Ambus.png'
 import "./Marques.css"
 export const Marques = () => {
     // On stock dans la const images tout les données des imports 
-    const images = [Adam, Look, Marcot, MMA, Fdcar, Immo, Decobois, Ambus];
+    const images = [Adam, Look, Marcot, MMA, Fdcar, Immo, Decobois, Ambus, CCPVM];
 
     // On double le tableau pour que l’animation soit continue sans saut
     const sliderImages = [...images, ...images];

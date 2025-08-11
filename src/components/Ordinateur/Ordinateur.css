@@ -1,0 +1,38 @@
+.gamme_pc {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.gamme_pc p {
+    line-height: 1.6
+}
+
+.gamme_pc article {
+    width: 300px;
+
+}
+
+.gamme_pc img {
+    border-radius: 2%;
+    width: 300px;
+    height: 300px;
+    margin-bottom: 10px;
+}
+
+.gamme_pc h4 {
+    font-size: 20px;
+    text-align: center;
+    color: #2a2f45;
+    margin-bottom: 20px;
+}
+
+.title_materiel {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+
+    color: #5a6185;
+}

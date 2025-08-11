@@ -34,7 +34,7 @@
 
 .video-content p {
     font-family: 'Montserrat', sans-serif;
-    font-size: 35px;
+    font-size: 33px;
     line-height: 1.5;
     /* max-width: 900px; */
     margin: 0 auto;
@@ -68,4 +68,23 @@
     hyphens: auto;
     width: 50%;
     text-align: center;
+}
+
+@media (max-width: 910px) {
+
+    .video-content p {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 665px) {
+
+    .video-content p {
+        font-size: 20px;
+    }
+
+    .div_presentation_equipe h2 {
+        text-align: center;
+    }
 }
