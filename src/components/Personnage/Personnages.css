@@ -5,6 +5,7 @@
     margin-top: 50px;
     font-family: 'Poppins', sans-serif;
     margin-bottom: 50px;
+
 }
 
 .div_equipe img {
@@ -73,6 +74,8 @@
 .div_equipe1,
 .div_equipe2 {
     display: flex;
+
+    GAP: 20px;
 }
 
 @keyframes fadeInUp {

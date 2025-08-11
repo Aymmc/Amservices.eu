@@ -1,0 +1,38 @@
+.infogerance img,
+.maitenance_img {
+    width: 400px;
+    height: 400px;
+    border-radius: 2%;
+    margin-right: 20px;
+}
+
+.infogerance article,
+.maitenance {
+    display: flex;
+    margin-left: 20px;
+}
+
+.infogerance span {
+    font-weight: bolder;
+}
+
+.serenite_desc {
+    max-width: 600px;
+}
+
+.serenite_desc p,
+.serenite_desc ul {
+    width: 100%;
+    line-height: 1.6;
+    /* espace entre lignes */
+    /* prend toute la largeur disponible */
+}
+
+.maitenance {
+    flex-direction: row-reverse;
+}
+
+.infogerance {
+
+    margin-top: 80px;
+}

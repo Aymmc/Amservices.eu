@@ -1,24 +1,49 @@
 .gamme_pc {
     display: flex;
     justify-content: center;
+    align-items: stretch;
+    /* étire tous les articles à la même hauteur */
     gap: 50px;
     margin-bottom: 40px;
     flex-wrap: wrap;
+    height: 550px;
 }
 
 .gamme_pc p {
-    line-height: 1.6
+    line-height: 1.6;
 }
 
 .gamme_pc article {
     width: 300px;
+    display: flex;
+    flex-direction: column;
+}
 
+.gamme_pc button {
+    margin-top: auto;
+    /* pousse le bouton en bas */
+    width: 150px;
+    background-color: #4c5372;
+    color: white;
+    cursor: pointer;
+    height: 36px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.gamme_pc button:hover {
+    background-color: #5a6185;
+    transform: translateY(-2px);
 }
 
 .gamme_pc img {
     border-radius: 2%;
     width: 300px;
     height: 300px;
+    object-fit: cover;
+    /* empêche la déformation */
     margin-bottom: 10px;
 }
 
@@ -32,7 +57,6 @@
 .title_materiel {
     text-align: center;
     margin-top: 50px;
-    margin-bottom: 30px;
-
+    margin-bottom: 50px;
     color: #5a6185;
 }

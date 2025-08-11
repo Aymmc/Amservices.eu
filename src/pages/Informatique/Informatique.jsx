@@ -1,6 +1,7 @@
 import React from "react";
-import Ordinateur from "../../components/Ordinateur/Ordinateur";
+import Materiel_Et_Vente from "../../components/Ordinateur/Materiel_Et_Vente";
 import VideoPresentationInformatique from "./video_presentation_informatique.mp4"
+import Infogerance from "../../components/Infogerance/Infogerance";
 const Informatique = () => {
   return (
     <>
@@ -21,10 +22,9 @@ const Informatique = () => {
             </p>
           </div>
         </div>
-        <h2 className="title_materiel">
-          Materiel et vente
-        </h2>
-        <Ordinateur />
+
+        <Materiel_Et_Vente />
+        <Infogerance />
       </div>
     </>
   )
