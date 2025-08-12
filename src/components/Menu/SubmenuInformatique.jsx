@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import './SubmenuInformatique.css';
+import { HashLink } from 'react-router-hash-link';
 
 const SubMenuInformatique = () => {
     const navigate = useNavigate();
@@ -22,30 +23,32 @@ const SubMenuInformatique = () => {
                     </p>
                     <button
                         className="submenu_button"
-                        onClick={() => navigate("/informatique/details")}
+                        onClick={() => navigate("/informatique")}
                     >
                         EN SAVOIR PLUS
                     </button>
                 </div>
                 <div className="navlink_menu">
-                    <NavLink
-                        to="/informatique/infogerance"
-                        className={({ isActive }) => (isActive ? "active" : "")}
-                    >
-                        Infogérance & Maintenance
-                    </NavLink>
-                    <NavLink
-                        to="/informatique/reseaux"
-                        className={({ isActive }) => (isActive ? "active" : "")}
-                    >
-                        Réseaux & Infrastructure
-                    </NavLink>
-                    <NavLink
-                        to="/informatique/materiel"
+
+                    <HashLink
+                        smooth to="/informatique#materiel"
                         className={({ isActive }) => (isActive ? "active" : "")}
                     >
                         Matériel & Vente
-                    </NavLink>
+                    </HashLink>
+                    <HashLink
+                        smooth to="/informatique#infogerance"
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                        Infogérance & Maintenance
+                    </HashLink>
+                    <HashLink
+                        smooth to="/informatique#infrastructure"
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                        Réseaux & Infrastructure
+                    </HashLink>
+
                 </div>
             </div>
         </div>

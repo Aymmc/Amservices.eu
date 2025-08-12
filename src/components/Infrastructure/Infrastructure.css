@@ -1,0 +1,8 @@
+.reseaux {
+    display: flex;
+}
+
+.reseaux span,
+.maitenance span {
+    font-weight: bolder;
+}

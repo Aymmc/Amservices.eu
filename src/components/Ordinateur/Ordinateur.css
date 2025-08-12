@@ -1,27 +1,33 @@
-.gamme_pc {
+/* Conteneur principal flexible et responsive */
+.flex-grid {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    /* étire tous les articles à la même hauteur */
     gap: 50px;
     margin-bottom: 40px;
     flex-wrap: wrap;
+}
+
+/* Hauteur forcée optionnelle (si nécessaire pour une section précise) */
+.fixed-height {
     height: 550px;
 }
 
-.gamme_pc p {
+/* Texte avec un interligne lisible */
+.text-default {
     line-height: 1.6;
 }
 
-.gamme_pc article {
+/* Bloc carte générique */
+.card {
     width: 300px;
     display: flex;
     flex-direction: column;
 }
 
-.gamme_pc button {
+/* Bouton principal */
+.btn-primary {
     margin-top: auto;
-    /* pousse le bouton en bas */
     width: 150px;
     background-color: #4c5372;
     color: white;
@@ -33,26 +39,47 @@
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.gamme_pc button:hover {
+.btn-primary:hover {
     background-color: #5a6185;
     transform: translateY(-2px);
 }
 
-.gamme_pc img {
+/* Image d’illustration */
+.card-img {
     border-radius: 2%;
     width: 300px;
     height: 300px;
     object-fit: cover;
-    /* empêche la déformation */
     margin-bottom: 10px;
 }
 
-.gamme_pc h4 {
+/* Titre centré */
+.card-title {
     font-size: 20px;
     text-align: center;
     color: #2a2f45;
     margin-bottom: 20px;
 }
+
+/* Titre section */
+.section-title {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    color: #5a6185;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 .title_materiel {
     text-align: center;

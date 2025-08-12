@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import './SubmenuInformatique.css';
+import { HashLink } from "react-router-hash-link";
 
 const SubMenuTelephonie = () => {
     const navigate = useNavigate();
@@ -35,24 +36,25 @@ const SubMenuTelephonie = () => {
                     </button>
                 </div>
                 <nav className="navlink_menu" aria-label="Sous-menu Téléphonie">
-                    <NavLink
-                        to="/telephonie/entreprise"
-                        className={({ isActive }) => (isActive ? "active" : "")}
-                    >
-                        Téléphonie d'entreprise
-                    </NavLink>
-                    <NavLink
-                        to="/telephonie/accessoires"
+                    <HashLink
+                        smooth to="/telephonie#equipement"
                         className={({ isActive }) => (isActive ? "active" : "")}
                     >
                         Matériel et Équipements
-                    </NavLink>
-                    <NavLink
-                        to="/telephonie/voip"
+                    </HashLink>
+                    <HashLink
+                        smooth to="/telephonie#entreprise"
+                        className={({ isActive }) => (isActive ? "active" : "")}
+                    >
+                        Téléphonie d'entreprise
+                    </HashLink>
+
+                    <HashLink
+                        smooth to="/telephonie#voip"
                         className={({ isActive }) => (isActive ? "active" : "")}
                     >
                         Solutions VoIP
-                    </NavLink>
+                    </HashLink>
                 </nav>
             </div>
         </div>

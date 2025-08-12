@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import './SubmenuInformatique.css';
+import { HashLink } from 'react-router-hash-link';
 
 const SubMenuInternet = () => {
     const navigate = useNavigate();
@@ -29,30 +30,31 @@ const SubMenuInternet = () => {
                     </p>
                     <button
                         className="submenu_button"
-                        onClick={() => navigate("/internet/details")}
+                        onClick={() => navigate("/internet")}
                     >
                         EN SAVOIR PLUS
                     </button>
                 </div>
                 <nav className="navlink_menu" aria-label="Sous-menu Connectivité Internet">
-                    <NavLink
-                        to="/internet/fibre"
+
+                    <HashLink
+                        smooth to="/internet#fibre"
                         className={({ isActive }) => (isActive ? "active" : "")}
                     >
                         Fibre Optique
-                    </NavLink>
-                    <NavLink
-                        to="/internet/starlink"
+                    </HashLink>
+                    <HashLink
+                        smooth to="/internet#starlink"
                         className={({ isActive }) => (isActive ? "active" : "")}
                     >
                         Starlink (Satellite)
-                    </NavLink>
-                    <NavLink
-                        to="/internet/4g"
+                    </HashLink>
+                    <HashLink
+                        smooth to="/internet#4g"
                         className={({ isActive }) => (isActive ? "active" : "")}
                     >
                         4G / Box 4G
-                    </NavLink>
+                    </HashLink>
                 </nav>
             </div>
         </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Materiel_Et_Vente from "../../components/Ordinateur/Materiel_Et_Vente";
 import VideoPresentationInformatique from "./video_presentation_informatique.mp4"
 import Infogerance from "../../components/Infogerance/Infogerance";
+import Infrastructure from "../../components/Infrastructure/Infrastructure";
 const Informatique = () => {
   return (
     <>
@@ -22,9 +23,15 @@ const Informatique = () => {
             </p>
           </div>
         </div>
-
-        <Materiel_Et_Vente />
-        <Infogerance />
+        <section id="materiel" className='Materiel_Et_Vente'>
+          <Materiel_Et_Vente />
+        </section>
+        <section id='infogerance' className="infogerance">
+          <Infogerance />
+        </section>
+        <section id="infrastructure" className="infrastructure">
+          {/* <Infrastructure /> */}
+        </section>
       </div>
     </>
   )
