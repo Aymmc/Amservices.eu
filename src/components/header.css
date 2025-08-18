@@ -56,7 +56,6 @@ header {
 
 .submenu_button {
     width: 150px;
-
     background-color: red;
     color: white;
     cursor: pointer;
@@ -65,6 +64,13 @@ header {
     border-radius: 4px;
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submenu_button:hover {
+    background-color: darkred;
+    /* Change légèrement la couleur */
+    transform: scale(1.08);
+    /* Petit zoom */
 }
 
 @media (max-width: 1090px) {
@@ -137,4 +143,18 @@ header {
 
     }
 
+}
+
+@media (max-width: 1460px) {
+    .submenutel {
+        width: 360px !important;
+        display: flex;
+        flex-direction: column !important;
+        height: 430px !important;
+    }
+
+    .navlink_description {
+        width: 100% !important;
+
+    }
 }

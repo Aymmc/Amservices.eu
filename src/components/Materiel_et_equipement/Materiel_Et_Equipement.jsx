@@ -42,7 +42,10 @@ const Materiel_Et_Equipement = () => {
             <AnimatedSection
                 sectionTitle="Téléphonie Fixe"
                 direction="right"
-                items={[
+                items=
+
+
+                {[
                     {
                         img: Huit_Lignes,
                         alt: "Huit_Lignes",

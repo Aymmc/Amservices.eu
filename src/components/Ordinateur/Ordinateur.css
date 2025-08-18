@@ -9,9 +9,7 @@
 }
 
 /* Hauteur forcée optionnelle (si nécessaire pour une section précise) */
-.fixed-height {
-    height: 550px;
-}
+.fixed-height {}
 
 /* Texte avec un interligne lisible */
 .text-default {

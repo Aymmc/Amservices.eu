@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import './SubmenuInformatique.css';
 import { HashLink } from 'react-router-hash-link';
 
 const SubMenuInternet = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const [submenuOpen, setSubmenuOpen] = useState(false);
+
+    const isHashActive = (hash) => location.hash === hash;
 
     return (
         <div
@@ -21,6 +24,7 @@ const SubMenuInternet = () => {
             >
                 Connectivité Internet
             </NavLink>
+
             <div className={`submenu submenuinter${submenuOpen ? ' open' : ''}`}>
                 <div className="navlink_description">
                     <h3>Connectivité Internet</h3>
@@ -35,23 +39,26 @@ const SubMenuInternet = () => {
                         EN SAVOIR PLUS
                     </button>
                 </div>
-                <nav className="navlink_menu" aria-label="Sous-menu Connectivité Internet">
 
+                <nav className="navlink_menu" aria-label="Sous-menu Connectivité Internet">
                     <HashLink
-                        smooth to="/internet#fibre"
-                        className={({ isActive }) => (isActive ? "active" : "")}
+                        smooth
+                        to="/internet#fibre"
+                        className={isHashActive("#fibre") ? "active" : ""}
                     >
                         Fibre Optique
                     </HashLink>
                     <HashLink
-                        smooth to="/internet#starlink"
-                        className={({ isActive }) => (isActive ? "active" : "")}
+                        smooth
+                        to="/internet#starlink"
+                        className={isHashActive("#starlink") ? "active" : ""}
                     >
                         Starlink (Satellite)
                     </HashLink>
                     <HashLink
-                        smooth to="/internet#4g"
-                        className={({ isActive }) => (isActive ? "active" : "")}
+                        smooth
+                        to="/internet#4g"
+                        className={isHashActive("#4g") ? "active" : ""}
                     >
                         4G / Box 4G
                     </HashLink>

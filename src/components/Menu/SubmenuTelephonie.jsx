@@ -1,11 +1,14 @@
 import React, { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate, useLocation } from "react-router-dom";
 import './SubmenuInformatique.css';
 import { HashLink } from "react-router-hash-link";
 
 const SubMenuTelephonie = () => {
     const navigate = useNavigate();
+    const location = useLocation();
     const [submenuOpen, setSubmenuOpen] = useState(false);
+
+    const isHashActive = (hash) => location.hash === hash;
 
     return (
         <div
@@ -21,7 +24,8 @@ const SubMenuTelephonie = () => {
             >
                 Téléphonie
             </NavLink>
-            <div className={`submenu submenutel${submenuOpen ? ' open' : ''}`} >
+
+            <div className={`submenu submenutel${submenuOpen ? ' open' : ''}`}>
                 <div className="navlink_description">
                     <h3>Téléphonie</h3>
                     <p>
@@ -35,25 +39,21 @@ const SubMenuTelephonie = () => {
                         EN SAVOIR PLUS
                     </button>
                 </div>
+
                 <nav className="navlink_menu" aria-label="Sous-menu Téléphonie">
                     <HashLink
-                        smooth to="/telephonie#equipement"
-                        className={({ isActive }) => (isActive ? "active" : "")}
+                        smooth
+                        to="/telephonie#equipement"
+                        className={isHashActive("#equipement") ? "active" : ""}
                     >
-                        Matériel et Équipements
+                        Téléphone Mobile
                     </HashLink>
                     <HashLink
-                        smooth to="/telephonie#entreprise"
-                        className={({ isActive }) => (isActive ? "active" : "")}
+                        smooth
+                        to="/telephonie#entreprise"
+                        className={isHashActive("#entreprise") ? "active" : ""}
                     >
-                        Téléphonie d'entreprise
-                    </HashLink>
-
-                    <HashLink
-                        smooth to="/telephonie#voip"
-                        className={({ isActive }) => (isActive ? "active" : "")}
-                    >
-                        Solutions VoIP
+                        Téléphone Fixe
                     </HashLink>
                 </nav>
             </div>

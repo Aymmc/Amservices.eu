@@ -1,8 +1,5 @@
 import React from 'react'
 
-import Fibre from '../../components/Fibre/Fibre'
-import Starlink from '../../components/Starlink/Starlink'
-import Reseaux4g from '../../components/Reseaux4g/Reseaux4g'
 import VideoPresentationTelephonie from './TelephonieVideo.mp4'
 import Materiel_Et_Equipement from '../../components/Materiel_et_equipement/Materiel_Et_Equipement'
 const Telephonie = () => {

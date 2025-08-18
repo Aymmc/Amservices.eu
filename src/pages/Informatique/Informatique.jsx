@@ -30,7 +30,7 @@ const Informatique = () => {
           <Infogerance />
         </section>
         <section id="infrastructure" className="infrastructure">
-          {/* <Infrastructure /> */}
+          <Infrastructure />
         </section>
       </div>
     </>

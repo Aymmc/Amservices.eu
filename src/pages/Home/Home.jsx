@@ -17,13 +17,18 @@ const Home = () => {
             loop
             playsInline
             className="background-video"
-            aria-label="Vidéo de présentation des services AM Services"
+            title="Présentation vidéo des services informatiques, télécom et cybersécurité - AM Services"
+            aria-label="Présentation vidéo des solutions proposées par AM Services pour les entreprises et administrations vosgiennes : informatique, télécom et cybersécurité"
           />
           <div className="video-content" aria-live="polite">
+
+            <h1 className='sr-only'>
+              AM Services – Solutions en Informatique, Télécom et Cybersécurité
+            </h1>
             <p>
-              Partenaire privilégié des entreprises vosgiennes,<br />
-              nous offrons des solutions complètes en informatique,<br />
-              télécom et cybersécurité.
+              Partenaire privilégié des entreprises et administrations vosgiennes,<br />
+              nous offrons des solutions complètes en <strong>informatique</strong>,<br />
+              <strong>télécom</strong> et <strong>cybersécurité</strong>.
             </p>
           </div>
         </div>
@@ -32,7 +37,8 @@ const Home = () => {
           <h2 id="equipe-title">Notre équipe de spécialistes</h2>
           <div className="div_paragraphe_equipe">
             <p>
-              5 experts dont 4 techniciens cumulant plus de 15 ans d'expérience mettent leurs compétences à votre service.
+              5 experts dont 4 techniciens cumulant plus de 15 ans d'expérience
+              mettent leurs compétences à votre service.
             </p>
           </div>
         </section>

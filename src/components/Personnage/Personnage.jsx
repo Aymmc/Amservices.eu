@@ -3,6 +3,7 @@ import AM from './Aurelien.png';
 import CM from './Catherine.png';
 import FH from './Frantz.png';
 import GC from './Gaitan.png';
+import SH from './Sylvain.png'
 import './Personnages.css';
 
 const Personnage = () => {
@@ -65,6 +66,14 @@ const Personnage = () => {
                     <div className="div_equipe_titre">
                         <h3>GAËTAN</h3>
                         <p>Technicien Informatique et réseau.</p>
+                    </div>
+                    <p>Spécialité : Technicien informatique et réseau généraliste polyvalent.</p>
+                </article>
+                <article className="personnage" role="listitem">
+                    <img src={SH} alt="Portrait de Sylvain, technicien informatique et réseau polyvalent" />
+                    <div className="div_equipe_titre">
+                        <h3>SYLVAIN</h3>
+                        <p>Technicien Informatique et réseau junior.</p>
                     </div>
                     <p>Spécialité : Technicien informatique et réseau généraliste polyvalent.</p>
                 </article>
