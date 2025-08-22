@@ -22,7 +22,7 @@ const Telephonie = () => {
             </p>
           </div>
         </div>
-        <section id="MaterielEquipement" className='Equipement'>
+        <section id="equipement" className='Equipement' >
           <Materiel_Et_Equipement />
         </section>
         <section id="starlink" className="starlink">

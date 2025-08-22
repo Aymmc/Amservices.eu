@@ -4,6 +4,7 @@ import CM from './Catherine.png';
 import FH from './Frantz.png';
 import GC from './Gaitan.png';
 import SH from './Sylvain.png'
+import ALV from './Aymeric.png'
 import './Personnages.css';
 
 const Personnage = () => {
@@ -49,6 +50,14 @@ const Personnage = () => {
                     </div>
                     <p>Spécialité : Gestion relation client - Experte audits contractuels</p>
                 </article>
+                <article className="personnage" role="listitem">
+                    <img src={SH} alt="Portrait de Sylvain, technicien informatique et réseau polyvalent" />
+                    <div className="div_equipe_titre">
+                        <h3>SYLVAIN</h3>
+                        <p>Technicien Informatique et réseau junior.</p>
+                    </div>
+                    <p>Spécialité : Technicien informatique et réseau généraliste polyvalent.</p>
+                </article>
             </div>
 
             <div className="div_equipe2" role="list">
@@ -69,13 +78,14 @@ const Personnage = () => {
                     </div>
                     <p>Spécialité : Technicien informatique et réseau généraliste polyvalent.</p>
                 </article>
+
                 <article className="personnage" role="listitem">
-                    <img src={SH} alt="Portrait de Sylvain, technicien informatique et réseau polyvalent" />
+                    <img src={ALV} alt="Portrait de Aymeric, Alternant Commercial en informatique" />
                     <div className="div_equipe_titre">
-                        <h3>SYLVAIN</h3>
-                        <p>Technicien Informatique et réseau junior.</p>
+                        <h3>AYMERIC</h3>
+                        <p>Alternant Commercial en informatique.</p>
                     </div>
-                    <p>Spécialité : Technicien informatique et réseau généraliste polyvalent.</p>
+                    <p>Spécialité : Technicien informatique et montage ordinateur.</p>
                 </article>
             </div>
         </section>

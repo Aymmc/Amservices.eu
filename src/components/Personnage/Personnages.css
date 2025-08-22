@@ -90,6 +90,16 @@
     }
 }
 
+@media (max-width: 1480px) {
+
+    .div_equipe {
+        display: flex;
+
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media (max-width: 910px) {
 
     .video-content p {
@@ -126,6 +136,7 @@
     .div_footer_content {
         flex-direction: column;
         gap: 10px;
+        margin-bottom: 10px;
         align-items: flex-start;
     }
 }
@@ -143,5 +154,11 @@
     .div_footer_content p,
     .div_footer_content a {
         font-size: 15px;
+
     }
+
+    .div_footer {
+        margin-bottom: 20px;
+    }
+
 }

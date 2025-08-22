@@ -16,13 +16,13 @@ li img {
     margin-bottom: 15px;
 }
 
-.Equipement div {
+/* .Equipement div {
     width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
     line-height: 1.6;
-}
+} */
 
 .Equipement article {
     display: flex;

@@ -1,8 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./ContactSlides.css";
 
 const ContactSlides = () => {
     const [collapsed, setCollapsed] = useState(false);
+
+    useEffect(() => {
+        // Vérifie la largeur de l'écran au montage
+        if (window.innerWidth < 768) {
+            setCollapsed(true);
+        }
+    }, []);
 
     return (
         <aside
@@ -35,19 +42,24 @@ const ContactSlides = () => {
                         <br />
                         <span itemProp="streetAddress">41 Rue des Poncées</span>
                         <br />
-                        <span itemProp="postalCode">88200</span> <span itemProp="addressLocality">Saint-Étienne-lès-Remiremont</span>
+                        <span itemProp="postalCode">88200</span>{" "}
+                        <span itemProp="addressLocality">Saint-Étienne-lès-Remiremont</span>
                     </address>
 
                     <div className="contact-item">
                         <strong>Téléphone :</strong>
                         <br />
-                        <a href="tel:+33329221601" itemProp="telephone">+33 3 29 22 16 01</a>
+                        <a href="tel:+33329221601" itemProp="telephone">
+                            +33 3 29 22 16 01
+                        </a>
                     </div>
 
                     <div className="contact-item">
                         <strong>Email :</strong>
                         <br />
-                        <a href="mailto:contact@amservices.com" itemProp="email">contact@amservices.com</a>
+                        <a href="mailto:contact@amservices.eu" itemProp="email">
+                            contact@amservices.eu
+                        </a>
                     </div>
                 </>
             )}

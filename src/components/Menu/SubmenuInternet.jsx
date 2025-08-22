@@ -50,18 +50,19 @@ const SubMenuInternet = () => {
                     </HashLink>
                     <HashLink
                         smooth
+                        to="/internet#4g"
+                        className={isHashActive("#4g") ? "active" : ""}
+                    >
+                        Dépannage instantané 4G/5G
+                    </HashLink>
+                    <HashLink
+                        smooth
                         to="/internet#starlink"
                         className={isHashActive("#starlink") ? "active" : ""}
                     >
                         Starlink (Satellite)
                     </HashLink>
-                    <HashLink
-                        smooth
-                        to="/internet#4g"
-                        className={isHashActive("#4g") ? "active" : ""}
-                    >
-                        4G / Box 4G
-                    </HashLink>
+
                 </nav>
             </div>
         </div>

@@ -5,9 +5,11 @@ import Routeur from './Routeur.png'
 import Reseau4g from './Reseau4g.png'
 import Starlink from './Starlink.png'
 import AnimatedSection from '../../Hook/Block'
-
+import TarifsSlide from '../../Hook/TarifsSlide'
+import { useState } from 'react'
 
 const Internet = () => {
+    const [openTarifs, setOpenTarifs] = useState(false)
     const clients1 = useCountUp(120, 2000); // monte jusqu'à 400 en 2 secondes
     return (
         <>
@@ -34,28 +36,38 @@ const Internet = () => {
                     items={[
                         {
                             img: Routeur,
-                            alt: "Fibre Optique : La puissance de la connexion",
-                            title: "Fibre Optique : La puissance de la connexion",
+                            alt: "Fibre Optique : la puissance de la connexion",
+                            title: "Fibre Optique : la puissance de la connexion",
                             text: "En tant que fournisseur internet, AMServices gère l'installation et la maintenance de votre fibre optique de A à Z pour une connectivité stable et ultra-rapide."
                         },
                         {
                             img: Reseau4g,
-                            alt: "Installation 4G/5G professionnelle",
-                            title: "Installation 4G/5G professionnelle",
+                            alt: "Dépannage instantané 4G/5G",
+                            title: "Dépannage instantané 4G/5G",
                             text: "Avec nos solutions 4G/5G, votre entreprise bénéficie d'une connectivité flexible et performante, partout et à tout moment."
                         },
                         {
                             img: Starlink,
-                            alt: "Starlink, l'accès pour tous vos besoins",
-                            title: "Starlink, l'accès pour tous vos besoins",
-                            text: "La connexion Starlink d'AMServices est une solution internet ultra-performante et sans faille, même dans les zones les plus isolées."
+                            alt: "Starlink : l'accès pour tous vos besoins",
+                            title: "Starlink : l'accès pour tous vos besoins",
+                            text: "La connexion Starlink d'AMServices est une solution internet ultra-performante et fiable, même dans les zones les plus isolées."
                         }
                     ]}
                     count={clients1}
                     countLabel="Clients satisfaits"
-
+                    openTarifs={openTarifs} // ajoute .with-tarifs si open
                 />
-
+                <TarifsSlide
+                    buttonLabel="Voir nos tarifs"
+                    sectionTitle="Nos Fibres"
+                    tarifs={[
+                        { title: "Fibre Pro Dédiée Xconnect", description: "Met en avant la collecte séparée, synonyme de stabilité et de performance", price: "62,00€ HT/mois" },
+                        { title: "Fibre Pro SecureLite 4G", description: "Sauvegarde automatique 4G limitée à 10 Go, pensée pour assurer la continuité minimale du service", price: "79,00€ HT/mois" },
+                        { title: "Fibre Pro Continuum + DMG/GTR", description: "Met en avant la garantie de débit et la réactivité (8h), rassurant sur la haute disponibilité", price: "133,00€ HT/mois" },
+                    ]}
+                    openTarifs={openTarifs}
+                    setOpenTarifs={setOpenTarifs} // bouton contrôle l'état global
+                />
             </div>
         </>
     )

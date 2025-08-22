@@ -3,7 +3,7 @@ import './Ordinateur.css'
 import PC_FIXE from './Pc_Fixe.png'
 import Pc_PORTABLE from './Pc_Portable.png'
 import NAS from "./NAS.png"
-
+import Serveur from './Serveur.png'
 const Ordinateur = () => {
     return (
         <>
@@ -38,9 +38,18 @@ const Ordinateur = () => {
                     <h4 className="card-title">Serveur NAS</h4>
                     <img className="card-img" src={NAS} alt="Photo de la présentation de la gamme NAS" />
                     <p className="text-default">
-                        Sécurisez, centralisez et partagez vos données en toute simplicité.
-                        Nos solutions NAS vous offrent un espace de stockage en réseau
-                        fiable et performant, accessible à tout moment.
+                        Sécurisez, centralisez, et partagez vos données.
+                        Nos solutions NAS offrent un stockage réseau fiable et performant, toujours accessible..
+                    </p>
+                    <button className="btn-primary">EN SAVOIR PLUS</button>
+                </article>
+
+                <article className="card">
+                    <h4 className="card-title">Serveur</h4>
+                    <img className="card-img" src={Serveur} alt="Photo de la présentation de la gamme NAS" />
+                    <p className="text-default">
+                        Votre entreprise a besoin de performance et de fiabilité.
+                        Découvrez nos serveurs sur mesure, centralisés et hautement fiables.
                     </p>
                     <button className="btn-primary">EN SAVOIR PLUS</button>
                 </article>

@@ -7,13 +7,29 @@ const SubMenuTelephonie = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const [submenuOpen, setSubmenuOpen] = useState(false);
+    const [forceClose, setForceClose] = useState(false); // empêche réouverture immédiate
 
     const isHashActive = (hash) => location.hash === hash;
+
+    const handleNavigate = (path) => {
+        navigate(path);
+        closeMenu();
+    };
+
+    const handleHashClick = () => {
+        closeMenu();
+    };
+
+    const closeMenu = () => {
+        setForceClose(true);
+        setSubmenuOpen(false);
+        setTimeout(() => setForceClose(false), 300); // évite réouverture auto
+    };
 
     return (
         <div
             className="navlink_with_submenu"
-            onMouseEnter={() => setSubmenuOpen(true)}
+            onMouseEnter={() => !forceClose && setSubmenuOpen(true)}
             onMouseLeave={() => setSubmenuOpen(false)}
         >
             <NavLink
@@ -34,7 +50,7 @@ const SubMenuTelephonie = () => {
                     </p>
                     <button
                         className="submenu_button"
-                        onClick={() => navigate("/telephonie/details")}
+                        onClick={() => handleNavigate("/telephonie")}
                     >
                         EN SAVOIR PLUS
                     </button>
@@ -43,18 +59,21 @@ const SubMenuTelephonie = () => {
                 <nav className="navlink_menu" aria-label="Sous-menu Téléphonie">
                     <HashLink
                         smooth
-                        to="/telephonie#equipement"
-                        className={isHashActive("#equipement") ? "active" : ""}
-                    >
-                        Téléphone Mobile
-                    </HashLink>
-                    <HashLink
-                        smooth
                         to="/telephonie#entreprise"
-                        className={isHashActive("#entreprise") ? "active" : ""}
+                        className={isHashActive("#equipement") ? "active" : ""}
+                        onClick={handleHashClick}
                     >
                         Téléphone Fixe
                     </HashLink>
+                    <HashLink
+                        smooth
+                        to="/telephonie#equipement"
+                        className={isHashActive("#equipement") ? "active" : ""}
+                        onClick={handleHashClick}
+                    >
+                        Téléphone Mobile
+                    </HashLink>
+
                 </nav>
             </div>
         </div>
